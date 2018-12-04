@@ -18,11 +18,16 @@ if __name__ == '__main__':
 
         k = int(nk[1])
 
-        lstBitWise = []
-        for i in range(1,n+1):
-            for j in range(i,n+1):
-                iBitWise = i&j
-                if iBitWise < k and i!=j:
-                    lstBitWise.append(iBitWise)
-        print(max(lstBitWise))
-
+#       lstBitWise = [0]
+#       for i in range(1,n+1):
+#           for j in range(i+1,n+1):
+#               iBitWise = i&j
+#               print(i,j,bin(i),bin(j),iBitWise, bin(iBitWise))
+#               if iBitWise < k and iBitWise>0:
+#                   lstBitWise.append(iBitWise)
+#       print(max(lstBitWise))
+#
+        """
+        2-2
+        """
+        print(k-1 if ((k-1) | k) <= n else k-2)
